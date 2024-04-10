@@ -1,4 +1,8 @@
+import "package:digital_clinic/pages/home_page.dart";
+import "package:digital_clinic/pages/reset_password.dart";
+import "package:digital_clinic/pages/sign_in.dart";
 import "package:digital_clinic/pages/sign_up.dart";
+import "package:digital_clinic/reusables/bottom_navbar.dart";
 import "package:flutter/material.dart";
 
 void main(){
@@ -12,7 +16,7 @@ class DigitalClinic extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUp(),
+      home: BottomNavBar(),
     );
   }
 }

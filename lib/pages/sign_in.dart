@@ -2,8 +2,8 @@ import 'package:digital_clinic/reusables/long_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SignUp extends StatelessWidget {
-  const SignUp({Key? key});
+class SignIn extends StatelessWidget {
+  const SignIn({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class SignUp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Sign Up",
+                        "Sign In",
                         style: TextStyle(fontSize: 44, fontWeight: FontWeight.bold, color: Colors.white),
                       ),
                       Text(
@@ -67,32 +67,8 @@ class SignUp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  //name textfiled
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-                    child: Text(
-                      "Name",
-                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[500], fontSize: 16),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.05), // Apply horizontal padding
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Full Name',
-                        hintStyle: TextStyle(color: Colors.grey[500]),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5),
-                          borderSide: BorderSide(),
-                        ),
-                        contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10), // Adjust the content padding
-                      ),
-                    ),
-                  ),
 
-                  SizedBox(height: 5),
-
-                  //email textfiled
+                  //Email textfiled
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                     child: Text(
@@ -114,33 +90,6 @@ class SignUp extends StatelessWidget {
                       ),
                     ),
                   ),
-
-                  SizedBox(height: 5),
-
-                  //mobile number textfiled
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-                    child: Text(
-                      "Mobile Number",
-                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.grey[500], fontSize: 16),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.05), // Apply horizontal padding
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'Mobile Number',
-                        hintStyle: TextStyle(color: Colors.grey[500]),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5),
-                          borderSide: BorderSide(),
-                        ),
-                        contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10), // Adjust the content padding
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(height: 5),
 
                   //password textfiled
                   Padding(
@@ -178,10 +127,10 @@ class SignUp extends StatelessWidget {
                   ),
 
                   //button
-                  SizedBox(height: 30),
+                  SizedBox(height: height * 0.22),
 
                   LongButton(
-                    text: "Sign Up",
+                    text: "Sign In",
                     textColor: Colors.white,
                     colors: Color.fromRGBO(106, 121, 213, 1.0),
                     onPressed: (){},
@@ -276,16 +225,16 @@ class SignUp extends StatelessWidget {
 
                   SizedBox(height: height * 0.02),
 
-                  //Already have an account?
+                  //Don't have an account?
 
                   Center(
                     child: RichText(
                       text: TextSpan(
-                        text: 'Already have an account? ',
+                        text: 'Don\'t have an account? ',
                         style: TextStyle(color: Colors.grey[500]),
                         children: <TextSpan>[
                           TextSpan(
-                            text: 'Sign In',
+                            text: 'Sign up',
                             style: TextStyle(color: Color.fromRGBO(106, 121, 213, 1.0), fontWeight: FontWeight.bold),
                           ),
                         ],

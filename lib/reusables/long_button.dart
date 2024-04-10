@@ -4,12 +4,16 @@ class LongButton extends StatelessWidget {
   final String text;
   final Color colors;
   final VoidCallback onPressed;
+  final Color borderColor;
+  final Color textColor;
 
   const LongButton({
     Key? key,
     required this.text,
     required this.colors,
     required this.onPressed,
+    required this.borderColor,
+    required this.textColor,
   }) : super(key: key);
 
   @override
@@ -25,12 +29,13 @@ class LongButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: colors,
           borderRadius: BorderRadius.circular(5),
+          border: Border.all(color: borderColor), // Add border color here
         ),
         child: Center(
           child: Text(
             text,
-            style: const TextStyle(
-              color: Colors.white,
+            style: TextStyle(
+              color: textColor, // Set text color here
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
