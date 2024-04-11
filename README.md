@@ -1,16 +1,2 @@
-# digital_clinic
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Sign up Page
+<img width="367" alt="Screenshot 2024-04-10 at 13 55 32" src="https://github.com/Kanishka714/digital-clinic/assets/130472767/f3ea232f-ee28-4341-9931-61daeaae5991">
