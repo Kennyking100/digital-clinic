@@ -12,32 +12,30 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: GNav(
-        tabs: [
-          GButton(
-            icon: Icons.home_outlined,
-            iconSize: 37,
-            iconColor: Color.fromRGBO(106, 121, 213, 1.0),
-          ),
-          GButton(
-            icon: FontAwesomeIcons.message,
-            iconColor: Color.fromRGBO(106, 121, 213, 1.0),
-          ),
-          GButton(
-            icon: FontAwesomeIcons.stethoscope,
-            iconColor: Color.fromRGBO(106, 121, 213, 1.0),
-          ),
-          GButton(
-            icon: FontAwesomeIcons.calendar,
-            iconColor: Color.fromRGBO(106, 121, 213, 1.0),
-          ),
-          GButton(
-            icon: FontAwesomeIcons.user,
-            iconColor: Color.fromRGBO(106, 121, 213, 1.0),
-          ),
-        ],
-      ),
+    return GNav(
+      tabs: [
+        GButton(
+          icon: Icons.home_outlined,
+          iconSize: 37,
+          iconColor: Color.fromRGBO(106, 121, 213, 1.0),
+        ),
+        GButton(
+          icon: FontAwesomeIcons.message,
+          iconColor: Color.fromRGBO(106, 121, 213, 1.0),
+        ),
+        GButton(
+          icon: FontAwesomeIcons.stethoscope,
+          iconColor: Color.fromRGBO(106, 121, 213, 1.0),
+        ),
+        GButton(
+          icon: FontAwesomeIcons.calendar,
+          iconColor: Color.fromRGBO(106, 121, 213, 1.0),
+        ),
+        GButton(
+          icon: FontAwesomeIcons.user,
+          iconColor: Color.fromRGBO(106, 121, 213, 1.0),
+        ),
+      ],
     );
   }
 }

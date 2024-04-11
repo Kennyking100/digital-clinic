@@ -1,6 +1,6 @@
-import 'package:digital_clinic/pages/profile_cards.dart';
-import 'package:digital_clinic/reusables/bottom_navbar.dart';
 import 'package:flutter/material.dart';
+import 'package:digital_clinic/reusables/bottom_navbar.dart';
+import 'package:digital_clinic/pages/profile_cards.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -21,34 +21,31 @@ class _HomePageState extends State<HomePage> {
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(120.0),
           child: AppBar(
-            backgroundColor: Colors.white, // Set app bar color to white
+            backgroundColor: Colors.white,
             actions: [
               IconButton(
                 icon: Icon(Icons.search, size: 30, color: Color.fromRGBO(106, 121, 213, 1.0)),
                 onPressed: () {},
               ),
               IconButton(
-                icon: Icon(Icons.location_on_outlined, size: 30, color: Color.fromRGBO(106, 121, 213, 1.0)), // Set icon color
+                icon: Icon(Icons.location_on_outlined, size: 30, color: Color.fromRGBO(106, 121, 213, 1.0)),
                 onPressed: () {},
               ),
             ],
             bottom: TabBar(
-              labelStyle: TextStyle(
-                fontSize: 24.0, // Set default font size
-              ),
-              labelColor: Color.fromRGBO(106, 121, 213, 1.0), // Set the color of the selected tab text
-              unselectedLabelColor: Color.fromRGBO(106, 121, 213, 1.0).withOpacity(0.5), // Set the color of unselected tab text
+              labelStyle: TextStyle(fontSize: 24.0),
+              labelColor: Color.fromRGBO(106, 121, 213, 1.0),
+              unselectedLabelColor: Color.fromRGBO(106, 121, 213, 1.0).withOpacity(0.5),
               indicator: BoxDecoration(
                 border: Border(
                   bottom: BorderSide(
-                    color: Color.fromRGBO(106, 121, 213, 1.0), // Set indicator color
+                    color: Color.fromRGBO(106, 121, 213, 1.0),
                     width: 5.0,
                   ),
                 ),
               ),
               onTap: (index) {
                 setState(() {
-                  // Reset both flags on tab change
                   showAllDoctors = false;
                   showAddDoctorsFirst = false;
                 });
@@ -67,7 +64,6 @@ class _HomePageState extends State<HomePage> {
         ),
         body: TabBarView(
           children: [
-            // Content for "All Doctors" tab
             showAllDoctors
                 ? SingleChildScrollView(
               child: Column(
@@ -80,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                     rank: 1,
                     likeCount: 200,
                     followerCount: 300,
-                    containerColor: Colors.blue, // Example color
+                    containerColor: Colors.blue,
                   ),
                   ProfileContainer(
                     profileImageUrl: "url",
@@ -100,7 +96,7 @@ class _HomePageState extends State<HomePage> {
                     rank: 1,
                     likeCount: 200,
                     followerCount: 300,
-                    containerColor: Colors.blue, // Example color
+                    containerColor: Colors.blue,
                   ),
                   ProfileContainer(
                     profileImageUrl: "url",
@@ -120,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                     rank: 1,
                     likeCount: 200,
                     followerCount: 300,
-                    containerColor: Colors.blue, // Example color
+                    containerColor: Colors.blue,
                   ),
                   ProfileContainer(
                     profileImageUrl: "url",
@@ -132,6 +128,7 @@ class _HomePageState extends State<HomePage> {
                     followerCount: 350,
                     containerColor: Colors.green, // Example color
                   ),
+                  // Add more ProfileContainer widgets for other doctors
                 ],
               ),
             )
@@ -145,7 +142,6 @@ class _HomePageState extends State<HomePage> {
                 child: Text("Show All Doctors"),
               ),
             ),
-            // Content for "My Doctors" tab
             showAddDoctorsFirst
                 ? Center(
               child: Text("Please add doctors first"),
@@ -160,6 +156,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
+        bottomNavigationBar: BottomNavBar(),
       ),
     );
   }
